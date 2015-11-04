@@ -37,10 +37,7 @@ function receiveData(googleData) {
 
       var str = post_data.song_title + " by " + post_data.song_artist;
       var result = post_data.itunes_link;
-      song_title.className = "song_title";
-      song_title.className = "song_artist";
       
-
       var caption = document.createElement("div");
       caption.innerHTML = post_data.caption;
       caption.className = "caption";
