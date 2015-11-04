@@ -11,6 +11,13 @@ function pauseClip(event) {
     document.getElementById(event.target.getAttribute('audioId')).pause();
 }
 
+function createLink() {
+  console.log("link");
+  var str = post_data.song_title + " by " + post_data.song_artist;
+  var result = str.link("post_data.itunes_link");
+  document.getElementById("ituneslink").innerHTML = result;
+}
+
 function receiveData(googleData) {
   var data = convertData(googleData);
  
@@ -35,9 +42,9 @@ function receiveData(googleData) {
       imageElement.addEventListener("mouseout", pauseClip);
       new_post.appendChild(imageElement);
 
-      var str = post_data.song_title + " by " + post_data.song_artist;
-      var result = str.link(post_data.itunes_link);
-      document.getElementById("itunes_link").innerHTML = result;
+      var string = document.createElement("div")
+      string.setAttribute("linkId", linkId)
+      string.addEventListener("mouseclick", createLink())
       
       var caption = document.createElement("div");
       caption.innerHTML = post_data.caption;
