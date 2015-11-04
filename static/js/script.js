@@ -35,7 +35,7 @@ function receiveData(googleData) {
       imageElement.addEventListener("mouseout", pauseClip);
       new_post.appendChild(imageElement);
 
-      var song_title = document.createElement("link");
+      var song_title = document.createElement("a");
       song_title.href = post_data.itunes_link;
       song_artist.href = post_data.itunes_link;
       song_title.className = "song_title"
