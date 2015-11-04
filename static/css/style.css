@@ -101,6 +101,8 @@
 #homebutton {
     text-align: center;
     font-size: 20px;
+    width: 20px;
+    height: auto;
 }
 
 .header {
