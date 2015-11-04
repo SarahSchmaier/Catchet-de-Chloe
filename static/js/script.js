@@ -35,8 +35,9 @@ function receiveData(googleData) {
       imageElement.addEventListener("mouseout", pauseClip);
       new_post.appendChild(imageElement);
 
-      var song_title = document.createElement("itunes_link");
+      var song_title = document.createElement("link");
       song_title.href = post_data.itunes_link;
+      song_artist.href = post_data.itunes_link;
       song_title.className = "song_title"
       song_title.innerHTML = post_data.song_title + " by " + post_data.song_artist;
 
