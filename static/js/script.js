@@ -42,9 +42,9 @@ function receiveData(googleData) {
       imageElement.addEventListener("mouseout", pauseClip);
       new_post.appendChild(imageElement);
 
-      var string = document.createElement("div")
-      string.setAttribute("linkId", linkId)
-      string.addEventListener("mouseclick", createLink())
+      var a = document.createElement("a")
+      a.href = post_data.itunes_link;
+      a.innerHTML = "post_data.song_title by post_data.song_artist";
       
       var caption = document.createElement("div");
       caption.innerHTML = post_data.caption;
