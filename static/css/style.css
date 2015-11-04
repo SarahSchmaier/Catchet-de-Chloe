@@ -1,0 +1,117 @@
+.photo {
+    margin: 20px;
+    max-width: 350px;
+    height: 200px;
+}
+.photo img {
+	width: auto;
+	height: 100%;
+    background-color: fuchsia
+}
+
+#dropdown {
+    background-color: white;
+}
+#dropmenu {
+    width: 960px;
+    margin: 0 auto;
+    text-align: left;
+}
+#dropdown  ul {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 200px;
+}
+#dropdown  ul li {
+    display: inline-block;
+}
+#dropdown  ul li:hover {
+    background-color: deeppink;
+}
+#dropdown  ul li {
+    display: block;
+    padding: 15px;
+
+}
+#dropdown  ul li:hover ul {
+    display: block;
+}
+#dropdown  ul ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 3px solid purple;
+ }
+#nav ul ul li {
+    display: block;
+}
+#nav ul ul li a:hover {
+    color: white;
+}
+
+#bigtitle {
+    color: deeppink;
+    font-family: cursive; 
+    font-size: 75px; 
+}
+
+#title {
+    color: navy;
+    font-family: monospace;
+    font-size: 35px;
+}
+
+#chloe {
+    color: mediumspringgreen;
+}
+
+.caption {
+    color: magenta;
+}
+
+#backbutton {
+    position: fixed;
+    top: 20px;
+    width: 100px;
+    height: auto;
+}
+
+.caption {
+    text-align: center;
+    font-size:20px;
+    font-style:bold;
+    color:magenta;
+}
+
+
+.OOTD img {
+    height: 250px;
+    width: auto;
+}
+
+.firstday {
+    position: relative;
+    float: left;
+    top: 20px;
+    right: 600px;
+
+}
+
+#homebutton {
+    text-align: center;
+    font-size: 20px;
+}
+
+.header {
+    text-align: center;
+    top: 20px;
+    font-family: trebuchet;
+    font-size: 30px; 
+    color: lightgreen;
+
+}
+
+
+
+    
