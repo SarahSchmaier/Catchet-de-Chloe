@@ -30,7 +30,6 @@ function receiveData(googleData) {
     if (post_data.category == document.getElementById("header").getAttribute("value")) {
       var new_post = document.createElement("div");
       new_post.className = post_data.category + " " + post_data.class;
-      new_post.innerHTML = post_data.caption;
     
       var audioId = "audio" + i;
       console.log(playClip);
@@ -44,7 +43,7 @@ function receiveData(googleData) {
 
       var a = document.createElement("a")
       a.href = post_data.itunes_link;
-      a.innerHTML = "post_data.song_title by post_data.song_artist";
+      a.innerHTML = post_data.song_title + " by " + post_data.song_artist;
       new_post.appendChild(a);
       
       var caption = document.createElement("div");
