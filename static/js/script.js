@@ -36,7 +36,7 @@ function receiveData(googleData) {
       new_post.appendChild(imageElement);
 
       var str = post_data.song_title + " by " + post_data.song_artist;
-      var result = post_data.itunes_link;
+      var result = str.link(post_data.itunes_link);
       
       var caption = document.createElement("div");
       caption.innerHTML = post_data.caption;
