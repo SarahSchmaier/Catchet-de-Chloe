@@ -23,7 +23,7 @@ function receiveData(googleData) {
     if (post_data.category == document.getElementById("header").getAttribute("value")) {
       var new_post = document.createElement("div");
       new_post.className = post_data.category + " " + post_data.class 
-      new_post.innerHTML = post_data.caption + " " + post_data.song_title + " " + post_data.song_artist;
+      new_post.innerHTML = str;
     
       var audioId = "audio" + i;
       console.log(playClip);

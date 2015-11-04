@@ -99,6 +99,7 @@
 }
 
 #homebutton {
+    padding-top: 10px;
     text-align: center;
     font-size: 20px;
     width: 100px;
