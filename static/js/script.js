@@ -41,8 +41,6 @@ function receiveData(googleData) {
       imageElement.addEventListener("mouseout", pauseClip);
       new_post.appendChild(imageElement);
 
-
-
       var a = document.createElement("a")
       a.href = post_data.itunes_link;
       a.innerHTML = post_data.song_title + " by " + post_data.song_artist;
@@ -60,11 +58,6 @@ function receiveData(googleData) {
       new_post.appendChild(audioElement);
 
       container.appendChild(new_post);
-
-      var blank_post = document.createElement("div");
-      blank_post.className = "blank_post";
-      blank_post.appendChild(blank_post);
-
     }
    
   }
