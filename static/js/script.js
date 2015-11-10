@@ -27,11 +27,6 @@ function receiveData(googleData) {
     var container = document.getElementById("container");
     
     if (post_data.category == document.getElementById("header").getAttribute("value")) {
-      var margin = document.createElement("div");
-      margin.innerHTML = " ";
-      margin.className = "margin";
-      document.body.appendChild(margin);
-
       var new_post = document.createElement("div");
       new_post.className = post_data.category;
       container.appendChild(new_post);
@@ -39,24 +34,36 @@ function receiveData(googleData) {
       var audioId = "audio" + i;
       console.log(playClip);
 
+      var ImageDiv = document.createElement("div");
+      ImageDiv.className = post_data.category + "-img";
+
+      var ItunesDiv = document.createElement("div");
+      ItunesDiv.className = post_data.category + "-itunes";
+
+      var BlogDiv = document.createElement("div");
+      BlogDiv.className = post_data.category + "-blog";
+
       var imageElement=document.createElement("img");
       imageElement.src = post_data.image;
       imageElement.setAttribute("audioId", audioId);
       imageElement.addEventListener("mouseover", playClip);
       imageElement.addEventListener("mouseout", pauseClip);
-      new_post.appendChild(imageElement);
+      ImageDiv.appendChild(imageElement);
+      new_post.appendChild(ImageDiv);
 
       var ituneslink = document.createElement("a")
       ituneslink.href = post_data.itunes_link;
       ituneslink.innerHTML = post_data.song_title + " by " + post_data.song_artist + "\n";
       ituneslink.className = "musiclinktext"
-      new_post.appendChild(ituneslink);
+      ItunesDiv.appendChild(ituneslink);
+      new_post.appendChild(ItunesDiv);
 
       var bloglink = document.createElement("a")
       bloglink.href = post_data.blog_link;
       bloglink.innerHTML = "\n" + post_data.caption;
       bloglink.className = "bloglinktext"
-      new_post.appendChild(bloglink);
+      BlogDiv.appendChild(bloglink);
+      new_post.appendChild(BlogDiv);
 
       // var caption = document.createElement("div");
       // caption.innerHTML = post_data.caption;
@@ -68,8 +75,6 @@ function receiveData(googleData) {
       audioElement.id = audioId;
       audioElement.volume = 0.2;
       new_post.appendChild(audioElement);
-
-      document.body.appendChild(margin);
 
       container.appendChild(new_post);
     }
