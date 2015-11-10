@@ -56,20 +56,20 @@
     color: mediumspringgreen;
 }
 
-.caption {
-    color: magenta;
+.OOTD {
+    padding: 15px;
 }
 
-#backbutton {
-    position: fixed;
-    top: 20px;
-    width: 100px;
-    height: auto;
+.OOTD > a {
+    position: absolute;
+    margin-top: 250px;
+    text-align: center;
+    font-size: 16px;
 }
 
 .caption {
     text-align: center;
-    font-size:20px;
+    font-size:16px;
     font-style:bold;
     color:magenta;
 }
@@ -77,20 +77,13 @@
 
 .OOTD img {
     height: 250px;
-    width: auto;
+    width: 150px;
+    object-fit: cover;
 }
 
 .Eyes img {
     height: 250px;
     width: auto;
-}
-
-#homebutton {
-    padding-top: 10px;
-    text-align: center;
-    font-size: 20px;
-    width: 100px;
-    height: auto;
 }
 
 .header {
@@ -101,6 +94,19 @@
     color: lightgreen;
 
 }
+
+#container {
+    height: 1200px;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+.bloglinktext {
+    font-family: times;
+    color: deeppink;
+    text-align: center;
+}
+
 
 .blank_post{
     width: 200px; 

@@ -11,26 +11,31 @@ function pauseClip(event) {
     document.getElementById(event.target.getAttribute('audioId')).pause();
 }
 
-function createLink() {
-  console.log("link");
-  var str = post_data.song_title + " by " + post_data.song_artist;
-  var result = str.link("post_data.itunes_link");
-  document.getElementById("ituneslink").innerHTML = result;
-}
+//function createLink() {
+  //console.log("link");
+  //var str = post_data.song_title + " by " + post_data.song_artist + "\n";
+  //var result = str.link("post_data.itunes_link");
+ // document.getElementById("ituneslink").innerHTML = result;
+//}
 
 function receiveData(googleData) {
   var data = convertData(googleData);
- 
-  var container = document.getElementById("container");
-  container.innerHTML = " ";
+
 
   for (var i = 0; i < data.length; i++) {
     var post_data = data[i];
+    var container = document.getElementById("container");
     
     if (post_data.category == document.getElementById("header").getAttribute("value")) {
+      var margin = document.createElement("div");
+      margin.innerHTML = " ";
+      margin.className = "margin";
+      document.body.appendChild(margin);
+
       var new_post = document.createElement("div");
-      new_post.className = post_data.category + " " + post_data.class;
-    
+      new_post.className = post_data.category;
+      container.appendChild(new_post);
+
       var audioId = "audio" + i;
       console.log(playClip);
 
@@ -41,21 +46,30 @@ function receiveData(googleData) {
       imageElement.addEventListener("mouseout", pauseClip);
       new_post.appendChild(imageElement);
 
-      var a = document.createElement("a")
-      a.href = post_data.itunes_link;
-      a.innerHTML = post_data.song_title + " by " + post_data.song_artist;
-      new_post.appendChild(a);
-      
-      var caption = document.createElement("div");
-      caption.innerHTML = post_data.caption;
-      caption.className = "caption";
-      new_post.appendChild(caption);
+      var ituneslink = document.createElement("a")
+      ituneslink.href = post_data.itunes_link;
+      ituneslink.innerHTML = post_data.song_title + " by " + post_data.song_artist + "\n";
+      ituneslink.className = "musiclinktext"
+      new_post.appendChild(ituneslink);
+
+      var bloglink = document.createElement("a")
+      bloglink.href = post_data.blog_link;
+      bloglink.innerHTML = "\n" + post_data.caption;
+      bloglink.className = "bloglinktext"
+      new_post.appendChild(bloglink);
+
+      // var caption = document.createElement("div");
+      // caption.innerHTML = post_data.caption;
+     // caption.className = "caption";
+     // new_post.appendChild(caption);
       
       var audioElement = document.createElement('audio');
       audioElement.src = post_data.audio;
       audioElement.id = audioId;
       audioElement.volume = 0.2;
       new_post.appendChild(audioElement);
+
+      document.body.appendChild(margin);
 
       container.appendChild(new_post);
     }
