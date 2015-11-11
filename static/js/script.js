@@ -20,6 +20,7 @@ function pauseClip(event) {
 
 function receiveData(googleData) {
   var data = convertData(googleData);
+  console.log(data);
 
 
   for (var i = 0; i < data.length; i++) {
