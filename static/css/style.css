@@ -69,15 +69,9 @@
     font-size: 16px;
 }
 
-.caption {
-    text-align: center;
-    font-size:16px;
-    font-style:bold;
-    color:magenta;
-}
-
 
 .OOTD img {
+    position: fixed;
     height: 250px;
     width: 150px;
     object-fit: cover;
