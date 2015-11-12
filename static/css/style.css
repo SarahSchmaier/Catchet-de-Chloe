@@ -8,6 +8,7 @@
 
 #dropdown {
     background-color: white;
+    float:left;
 }
 #dropmenu {
     width: 960px;
@@ -64,6 +65,7 @@
     display: block;
     width: 50%;
     font-weight: bold;
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
     color: #FFFFFF;
     background-color: deeppink;
     text-align: center;
@@ -86,16 +88,6 @@
     color: deeppink;
     font-family: cursive; 
     font-size: 75px; 
-}
-
-#title {
-    color: navy;
-    font-family: monospace;
-    font-size: 35px;
-}
-
-#chloe {
-    color: mediumspringgreen;
 }
 
 .grid {
@@ -152,10 +144,6 @@
 
 .OOTD-itunes {
     text-align: center;
-}
-
-.blank_post{
-    width: 200px; 
 }
 
 
