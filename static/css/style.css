@@ -1,3 +1,10 @@
+#homepageimage {
+    width: 500px;
+    height: 350px;
+    float: right;
+    margin-bottom: 3000px;
+    margin-right: 300px;
+}
 
 #dropdown {
     background-color: white;
@@ -5,16 +12,17 @@
 #dropmenu {
     width: 960px;
     margin: 0 auto;
-    text-align: left;
+    margin-left: 200px;
 }
 #dropdown  ul {
     padding: 0;
     margin: 0;
-    position: relative;
     width: 200px;
 }
 #dropdown  ul li {
     display: inline-block;
+    text-align: center;
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 #dropdown  ul li:hover {
     background-color: deeppink;
@@ -136,7 +144,7 @@
 }
 
 .musiclinktext {
-    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;;
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
     color: lightblue;
     text-align: center;
     text-decoration: none;
