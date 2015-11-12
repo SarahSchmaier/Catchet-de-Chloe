@@ -1,9 +1,11 @@
+body{
+    background-color: #FFDDFF; 
+}
+
 #homepageimage {
     width: 500px;
     height: 350px;
-    float: right;
-    margin-bottom: 3000px;
-    margin-right: 300px;
+    margin-bottom: 500px;
 }
 
 #dropdown {
@@ -11,7 +13,7 @@
     float:left;
 }
 #dropmenu {
-    width: 960px;
+    width: 250px;
     margin: 0 auto;
     margin-left: 200px;
 }
@@ -19,6 +21,7 @@
     padding: 0;
     margin: 0;
     width: 200px;
+    position: center;
 }
 #dropdown  ul li {
     display: inline-block;
@@ -76,7 +79,7 @@
 }
 
 .menu a:hover, a:active {
-    background-color: black;
+    background-color: turquoise;
 }
 
 .menu ul li {
@@ -113,9 +116,9 @@
 .header {
     text-align: center;
     top: 20px;
-    font-family: trebuchet;
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
     font-size: 30px; 
-    color: lightgreen;
+    color: deeppink;
 
 }
 
@@ -137,7 +140,7 @@
 
 .musiclinktext {
     font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
-    color: lightblue;
+    color: turquoise;
     text-align: center;
     text-decoration: none;
 }
@@ -146,5 +149,36 @@
     text-align: center;
 }
 
+.subtitle{
+    text-align: center;
+    font-size: 20px;
+    font-family: courier;
+    position: relative;
+    top: -50px;
+    color: fuchsia;
 
-    
+}
+
+.eyes-sub{
+    text-align: center;
+    font-size: 20px;
+    font-family: courier;
+    color: magenta;
+    font-size: 15px;
+    margin-bottom: 75px;
+
+}
+
+.ootd-sub{
+    text-align: center;
+    font-size: 20px;
+    font-family: courier;
+    color: magenta;
+    font-size: 15px;
+    margin-bottom: 65px;
+    position: relative;
+    top: -10px;
+    letter-spacing: 0.6em;
+}
+
+

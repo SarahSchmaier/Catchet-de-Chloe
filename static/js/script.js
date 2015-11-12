@@ -11,17 +11,9 @@ function pauseClip(event) {
     document.getElementById(event.target.getAttribute('audioId')).pause();
 }
 
-//function createLink() {
-  //console.log("link");
-  //var str = post_data.song_title + " by " + post_data.song_artist + "\n";
-  //var result = str.link("post_data.itunes_link");
- // document.getElementById("ituneslink").innerHTML = result;
-//}
-
 function receiveData(googleData) {
   var data = convertData(googleData);
   console.log(data);
-
 
   for (var i = 0; i < data.length; i++) {
     var post_data = data[i];
@@ -65,11 +57,6 @@ function receiveData(googleData) {
       bloglink.className = "bloglinktext"
       BlogDiv.appendChild(bloglink);
       new_post.appendChild(BlogDiv);
-
-      // var caption = document.createElement("div");
-      // caption.innerHTML = post_data.caption;
-     // caption.className = "caption";
-     // new_post.appendChild(caption);
       
       var audioElement = document.createElement('audio');
       audioElement.src = post_data.audio;
