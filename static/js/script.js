@@ -29,7 +29,7 @@ function receiveData(googleData) {
     
     if (post_data.category == document.getElementById("header").getAttribute("value")) {
       var new_post = document.createElement("div");
-      new_post.className = post_data.category;
+      new_post.className = "grid";
       container.appendChild(new_post);
 
       var audioId = "audio" + i;

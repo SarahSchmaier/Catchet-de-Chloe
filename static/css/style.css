@@ -40,6 +40,40 @@
     color: white;
 }
 
+.menu {
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu a:link, .menu a:visited {
+    display: block;
+    width: 50%;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: deeppink;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 25%;
+}
+
+.menu a:hover, a:active {
+    background-color: black;
+}
+
+.menu ul li {
+    float: left;
+    width: 33.3%;
+}
+
 #bigtitle {
     color: deeppink;
     font-family: cursive; 
@@ -56,29 +90,24 @@
     color: mediumspringgreen;
 }
 
-.OOTD {
+.grid {
     float: left;
     width : 29.3%;
     margin : 2%;
 }
 
-.OOTD > a {
-    position: absolute;
-    margin-top: 250px;
+.grid {
     text-align: center;
-    font-size: 16px;
 }
 
+.grid a:hover {
+    text-decoration: underline;
+}
 
-.OOTD img {
-    height: 250px;
-    width: 150px;
+.grid img {
+    height: 350px;
+    width: 100%;
     object-fit: cover;
-}
-
-.Eyes img {
-    height: 250px;
-    width: auto;
 }
 
 .header {
@@ -96,11 +125,26 @@
 }
 
 .bloglinktext {
-    font-family: times;
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
     color: deeppink;
+    text-align: center;
+    text-decoration: none;
+}
+
+.OOTD-blog {
     text-align: center;
 }
 
+.musiclinktext {
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;;
+    color: lightblue;
+    text-align: center;
+    text-decoration: none;
+}
+
+.OOTD-itunes {
+    text-align: center;
+}
 
 .blank_post{
     width: 200px; 
