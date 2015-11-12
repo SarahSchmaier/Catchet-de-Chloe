@@ -3,26 +3,35 @@ body{
 }
 
 #homepageimage {
-    width: 500px;
-    height: 350px;
-    margin-bottom: 500px;
+    float: left;
+    width: 75%;
+}
+
+#homepageimage img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 #dropdown {
-    background-color: white;
+    width: 15%;
+    margin: 5%;
     float:left;
 }
-#dropmenu {
-    width: 250px;
-    margin: 0 auto;
-    margin-left: 200px;
+
+#dropdown a:link, #dropdown a:visited {
+    color: purple;
+    text-decoration: none;
 }
+
 #dropdown  ul {
     padding: 0;
     margin: 0;
-    width: 200px;
+    width: 90%;
     position: center;
 }
+
 #dropdown  ul li {
     display: inline-block;
     text-align: center;
@@ -36,18 +45,24 @@ body{
     padding: 15px;
 
 }
+
 #dropdown  ul li:hover ul {
     display: block;
 }
-#dropdown  ul ul {
+
+#dropdown ul ul {
     display: none;
+    width: 25%;
     position: absolute;
     background-color: white;
     border: 3px solid purple;
  }
+
 #nav ul ul li {
     display: block;
+    width: 90%;
 }
+
 #nav ul ul li a:hover {
     color: white;
 }
@@ -79,7 +94,7 @@ body{
 }
 
 .menu a:hover, a:active {
-    background-color: turquoise;
+    background-color: black;
 }
 
 .menu ul li {

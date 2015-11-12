@@ -11,6 +11,34 @@ function pauseClip(event) {
     document.getElementById(event.target.getAttribute('audioId')).pause();
 }
 
+function getSoundAndFadeAudio(event) {
+    var sound = document.getElementById(event.target.getAttribute('audioId'));
+    
+    var fadeTime = 1000;
+
+    var maxvolume = 0.2;
+
+    sound.volume = 0;
+
+    sound.play();
+
+    var timestep = 100;
+
+    var fadeAudio = setInterval(function () {
+
+        if (sound.volume < maxvolume) {
+            var steps = fadeTime/timestep;
+            sound.volume += maxvolume/steps;
+        }
+        
+        if (sound.volume === maxvolume) {
+            clearInterval(fadeAudio);
+        }
+
+    }, timestep);
+
+}
+
 function receiveData(googleData) {
   var data = convertData(googleData);
   console.log(data);
@@ -39,7 +67,7 @@ function receiveData(googleData) {
       var imageElement=document.createElement("img");
       imageElement.src = post_data.image;
       imageElement.setAttribute("audioId", audioId);
-      imageElement.addEventListener("mouseover", playClip);
+      imageElement.addEventListener("mouseover", getSoundAndFadeAudio, playClip);
       imageElement.addEventListener("mouseout", pauseClip);
       ImageDiv.appendChild(imageElement);
       new_post.appendChild(ImageDiv);
