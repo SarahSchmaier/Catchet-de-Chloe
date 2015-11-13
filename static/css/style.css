@@ -4,7 +4,8 @@ body{
 
 #homepageimage {
     float: left;
-    width: 75%;
+    width: 50%;
+    margin-right: 5%;
 }
 
 #homepageimage img {
@@ -16,8 +17,9 @@ body{
 
 #dropdown {
     width: 15%;
-    margin: 5%;
     float:left;
+    margin: 5%;
+    font-weight: bold;
 }
 
 #dropdown a:link, #dropdown a:visited {
@@ -37,9 +39,11 @@ body{
     text-align: center;
     font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 }
+
 #dropdown  ul li:hover {
     background-color: deeppink;
 }
+
 #dropdown  ul li {
     display: block;
     padding: 15px;
@@ -155,7 +159,7 @@ body{
 
 .musiclinktext {
     font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
-    color: turquoise;
+    color: purple;
     text-align: center;
     text-decoration: none;
 }
